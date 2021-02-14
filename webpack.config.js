@@ -28,6 +28,10 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
         test: /\.vue$/,
         use: ['vue-loader'],
       },
@@ -56,7 +60,7 @@ module.exports = {
         loader: 'html-loader',
       },
       {
-        exclude: /\.(vue|scss|js|html)$/,
+        exclude: /\.(vue|scss|js|html|css)$/,
         loader: 'file-loader',
       },
     ],
